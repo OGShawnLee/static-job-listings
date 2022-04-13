@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [To be added](https://your-solution-url.com)
+- Solution URL: [Right here!](https://www.frontendmentor.io/solutions/fully-animated-with-state-management-job-listing-filtering-app-rJNV8nEVc)
 - Live Site URL: [Deployed on Vercel](https://static-job-listings-ivory-nine.vercel.app/)
 
 ## My process
@@ -48,7 +48,7 @@ Users should be able to:
 
 ### Continued development
 
-Animations and Transitions are amazing for spycing things up a little. Guess I should learn more about them.
+Animations and Transitions are amazing for spicing things up a little. Guess I should learn more about them.
 
 ### Useful resources
 
