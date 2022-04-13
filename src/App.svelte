@@ -4,11 +4,11 @@
 
   let main: HTMLElement;
 
-  function increaseMarginTop() {
+  function decreaseMarginTop() {
     main.classList.replace('mt-66', 'mt-32');
   }
 
-  function lowerMarginTop() {
+  function increaseMarginTop() {
     main.classList.replace('mt-32', 'mt-66');
   }
 </script>
@@ -20,8 +20,8 @@
     <section
       class="min-w-xs max-w-sm mx-auto p-6 | flex justify-between gap-4 | bg-white rounded-md shadow-lg | sm:container"
       transition:fade={{ duration: 150 }}
-      on:introstart={increaseMarginTop}
-      on:outroend={lowerMarginTop}>
+      on:introstart={decreaseMarginTop}
+      on:outroend={increaseMarginTop}>
       <h2 class="sr-only">Filters</h2>
       <div class="flex flex-wrap gap-4">
         <Filter filter={filters.role} on:click={() => setRole(null)} />
