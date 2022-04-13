@@ -1,3 +1,9 @@
+interface Filters {
+  role: string | null;
+  level: string | null;
+  skills: string[];
+}
+
 interface Listing {
   id: number;
   company: string;

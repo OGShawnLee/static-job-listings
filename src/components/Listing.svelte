@@ -1,7 +1,10 @@
 <script lang="ts">
+  import Option from './Option.svelte';
+  import { filters } from '../state';
+
   export let listing: Listing;
 
-  const skills = [listing.role, listing.level, ...listing.languages, ...listing.tools];
+  const skills = [...listing.languages, ...listing.tools];
 </script>
 
 <article
@@ -56,13 +59,24 @@
   <section class="lg:ml-auto">
     <h3 class="sr-only">Skills</h3>
     <ul class="flex flex-wrap gap-4">
+      <li>
+        <Option
+          label="add role {listing.role} to the filters"
+          on:click={() => filters.setRole(listing.role)}
+          option={listing.role} />
+      </li>
+      <li>
+        <Option
+          label="add level {listing.level} to the filters"
+          on:click={() => filters.setLevel(listing.level)}
+          option={listing.level} />
+      </li>
       {#each skills as skill}
         <li>
-          <button
-            class="py-1.5 px-2 rounded | bg-steal-100 font-bold text-cadet transition-colors duration-150 hover:(bg-cadet text-steal-100)"
-            aria-label="add {skill} to the filter list">
-            {skill}
-          </button>
+          <Option
+            label="add skill {skill} to the filter list"
+            on:click={() => filters.add(skill)}
+            option={skill} />
         </li>
       {/each}
     </ul>
