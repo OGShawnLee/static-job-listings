@@ -1,6 +1,7 @@
 <script lang="ts">
   import Option from './Option.svelte';
   import { filters } from '../state';
+  import { slide } from 'svelte/transition';
 
   export let listing: Listing;
 
@@ -10,6 +11,7 @@
 <article
   class="relative pt-12 px-6 pb-6 | flex flex-col gap-3 | bg-white rounded-md shadow-lg | sm:pt-8 lg:(flex-row items-center gap-8)"
   class:featured={listing.featured}
+  transition:slide={{ duration: 150 }}
   id="listing-{listing.id}">
   <!-- Details -->
   <div class="sm:(flex items-center gap-8)">
