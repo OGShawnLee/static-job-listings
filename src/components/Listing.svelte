@@ -42,10 +42,10 @@
           </div>
         {/if}
       </div>
-      <h2
+      <h3
         class="text-xl font-bold text-steal-600 transition-colors duration-150 hover:text-cadet cursor-pointer">
         {listing.position}
-      </h2>
+      </h3>
       <div class="space-x-1 text-steal-500">
         <span>{listing.postedAt}</span>
         <span aria-hidden="true"> &bull </span>
@@ -59,7 +59,7 @@
   <div class="h-[1px] my-2.5 | bg-steal-600/30 | lg:hidden" />
   <!-- Skills -->
   <section class="lg:ml-auto">
-    <h3 class="sr-only">Skills</h3>
+    <h4 class="sr-only">Skills</h4>
     <ul class="flex flex-wrap gap-4">
       <li>
         <Option
