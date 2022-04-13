@@ -1,9 +1,11 @@
 <script lang="ts">
+  import { scale } from 'svelte/transition';
+
   export let filter: string | null;
 </script>
 
 {#if filter}
-  <div class="flex items-center | bg-steal-100">
+  <div class="flex items-center | bg-steal-100" transition:scale={{ start: 1.5, duration: 125 }}>
     <span class="px-2">
       {filter}
     </span>
