@@ -1,115 +1,39 @@
-<!-- Item Start -->
-Photosnap New! Featured Senior Frontend Developer 1d ago Full Time USA only
-<!-- Role -->
-Frontend
-<!-- Level -->
-Senior
-<!-- Languages -->
-HTML CSS JavaScript
-<!-- Item End -->
+<script lang="ts">
+  import { Listing, Listings } from './components';
+</script>
 
-<!-- Item Start -->
-Manage New! Featured Fullstack Developer 1d ago Part Time Remote
-<!-- Role -->
-Fullstack
-<!-- Level -->
-Midweight
-<!-- Languages -->
-Python
-<!-- Tools -->
-React
-<!-- Item End -->
+<main class="max-w-sm mx-auto | sm:container">
+  <Listings let:listings>
+    <section class="grid gap-9">
+      <h1 class="sr-only">Job Listings</h1>
+      {#each listings as listing (listing.id)}
+        <Listing {listing} />
+      {/each}
+    </section>
+  </Listings>
+</main>
 
-<!-- Item Start -->
-Account New! Junior Frontend Developer 2d ago Part Time USA only
-<!-- Role -->
-Frontend
-<!-- Level -->
-Junior
-<!-- Languages -->
-JavaScript
-<!-- Tools -->
-React Sass
-<!-- Item End -->
+<style>
+  :global(html) {
+    font-size: 15px;
+  }
 
-<!-- Item Start -->
-MyHome Junior Frontend Developer 5d ago Contract USA only
-<!-- Role -->
-Frontend
-<!-- Level -->
-Junior
-<!-- Languages -->
-CSS JavaScript
-<!-- Item End -->
+  :global(body::after) {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 156px;
+    z-index: -10;
+    background-color: hsl(180, 29%, 50%);
+    background-image: url('./assets/bg-header-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-<!-- Item Start -->
-Loop Studios Software Engineer 1w ago Full Time Worldwide
-<!-- Role -->
-Fullstack
-<!-- Level -->
-Midweight
-<!-- Languages -->
-JavaScript Ruby
-<!-- Tools -->
-Sass
-<!-- Item End -->
-
-<!-- Item Start -->
-FaceIt Junior Backend Developer 2w ago Full Time UK only
-<!-- Role -->
-Backend
-<!-- Level -->
-Junior
-<!-- Languages -->
-Ruby
-<!-- Tools -->
-RoR
-<!-- Item End -->
-
-<!-- Item Start -->
-Shortly Junior Developer 2w ago Full Time Worldwide
-<!-- Role -->
-Frontend
-<!-- Level -->
-Junior
-<!-- Languages -->
-HTML JavaScript
-<!-- Tools -->
-Sass
-<!-- Item End -->
-
-<!-- Item Start -->
-Insure Junior Frontend Developer 2w ago Full Time USA only
-<!-- Role -->
-Frontend
-<!-- Level -->
-Junior
-<!-- Languages -->
-JavaScript
-<!-- Tools -->
-Vue Sass
-<!-- Item End -->
-
-<!-- Item Start -->
-Eyecam Co. Full Stack Engineer 3w ago Full Time Worldwide
-<!-- Role -->
-Fullstack
-<!-- Level -->
-Midweight
-<!-- Languages -->
-JavaScript Python
-<!-- Tools -->
-Django
-<!-- Item End -->
-
-<!-- Item Start -->
-The Air Filter Company Front-end Dev 1mo ago Part Time Worldwide
-<!-- Role -->
-Frontend
-<!-- Level -->
-Junior
-<!-- Languages -->
-JavaScript
-<!-- Tools -->
-React Sass
-<!-- Item End -->
+  @media (max-width: 375px) {
+    :global(body::after) {
+      background-image: url('./assets/bg-header-mobile.svg');
+    }
+  }
+</style>
